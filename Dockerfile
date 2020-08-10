@@ -16,9 +16,9 @@ WORKDIR /opt/to-do-app
 RUN ls -latr
 RUN mkdir /opt/to-do-app/dist
 RUN ls -latr
-COPY dist /opt/to-do-app/dist
-COPY server.js /opt/to-do-app
-COPY initialize.js /opt/to-do-app
+COPY /tmp/dist /opt/to-do-app/dist
+COPY /tmp/server.js /opt/to-do-app
+COPY /tmp/initialize.js /opt/to-do-app
 
 # run
 EXPOSE 8080
