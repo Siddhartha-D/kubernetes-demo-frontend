@@ -2,8 +2,7 @@ FROM node:7.7-alpine
 
 # install deps
 ADD package.json /tmp/package.json
-RUN cd /tmp
-RUN npm install && grunt
+RUN cd /tmp && npm install && grunt
 RUN ls -latr
 # Copy deps
 RUN mkdir -p /opt/to-do-app && cp -a /tmp/node_modules /opt/to-do-app
